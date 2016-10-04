@@ -1,0 +1,44 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+
+#app{
+	display: block;
+}
+.message-wrapper{
+	margin-bottom: 20px;
+	font-family: Roboto;
+}
+.text{
+	position: relative;
+	background-color: #2196F3;
+	color: white;
+	padding: 10px;
+	margin-right: 20px;
+	box-shadow: 0px 1px 0px 0px rgba(50, 50, 50, 0.3);
+	align-self: flex-end;
+}
+.message-inner{
+	display: flex;
+	flex-direction: column;
+}
+.text:after{
+	position: absolute;
+	top: 0;
+	right: -20px;
+	content: '';
+	border-top: #2196F3 solid 10px;
+	border-left: #2196F3 solid 10px;
+	border-bottom: transparent solid 10px;
+	border-right: transparent solid 10px;
+}
+.user{
+	color: #a8a8a8;
+	order: 2;
+	margin-right: 21px;
+	margin-top: 5px;
+	font-size: 10pt;
+	text-shadow: 0px 1px 3px rgba(50, 50, 50, 0.3);
+	align-self: flex-end;
+}
+.time{
+	display: none;
+}
