@@ -2,10 +2,6 @@ import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default class MessageList extends React.Component{
-	shouldComponentUpdate(nextProps){
-		return nextProps.messages.length !== this.props.messages.length;
-	}
-
 	render(){
 		// c = user class
 		// i = id
