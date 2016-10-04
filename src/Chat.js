@@ -31,6 +31,17 @@ export default class Chat extends React.Component{
 		this.socket = socket(this.qs.id);
 		this.socket.on('connected', () => {
 			this.setState({ready: true});
+			if(this.qs.simulate){
+				let id = -1;
+				setInterval(() => this.addMessage({
+					c: 2,
+					i: id--,
+					d: 'This is a demo message',
+					n: 'Demo',
+					t: '00:00',
+					u: 'demo',
+				}), 2000);
+			}
 		});
 		this.socket.on('msg', (message) => this.addMessage(message));
 	}

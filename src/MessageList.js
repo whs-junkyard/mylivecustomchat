@@ -12,11 +12,12 @@ export default class MessageList extends React.Component{
 		return (
 			<div className="messages">
 				<ReactCSSTransitionGroup
+					transitionName="message"
 					transitionEnterTimeout={1000}
 					transitionLeaveTimeout={1000}>
 				{this.props.messages.map((item) => {
 					return (
-						<div className="message-wrapper" key={item.id}
+						<div className="message-wrapper" key={item.i}
 							data-userclass={item.c}
 							data-id={item.i}
 							data-time={item.t}
