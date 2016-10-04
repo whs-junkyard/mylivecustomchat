@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default class MessageList extends React.Component{
 	shouldComponentUpdate(nextProps){
@@ -14,6 +15,9 @@ export default class MessageList extends React.Component{
 		// u = username
 		return (
 			<div className="messages">
+				<ReactCSSTransitionGroup
+					transitionEnterTimeout={1000}
+					transitionLeaveTimeout={1000}>
 				{this.props.messages.map((item) => {
 					return (
 						<div className="message-wrapper" key={item.id}
@@ -32,6 +36,7 @@ export default class MessageList extends React.Component{
 						</div>
 					);
 				})}
+				</ReactCSSTransitionGroup>
 			</div>
 		);
 	}
